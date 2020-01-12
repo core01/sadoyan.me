@@ -1,7 +1,8 @@
 <template>
   <main class="leading-loose p-4">
     <div class="mb-4">
-      <h3>About me</h3>
+      <img src="/photo.jpg" alt="Roman Sadoyan" class="mx-auto rounded-full" />
+      <h3 class="font-semibold text-xl">About me</h3>
       <div class="ml-5">
         <p>
           Graduated from
@@ -12,22 +13,31 @@
             rel="noopener"
           >
             ITMO University
-          </a> as master of Computer Science
+          </a>
+          as master of Computer Science
         </p>
-        <p><b>4+ years</b> of PHP & JS development</p>
-        <p><b>1+ years</b> of full-stack JS development with Nuxt.js (Vue & Express)</p>
+        <p>
+          Frontend-developer at
+          <a
+            href="https://cobrain.io"
+            class="no-underline"
+            target="_blank"
+            rel="noopener"
+          >
+            CoBrain-Analytics
+          </a>
+        </p>
       </div>
     </div>
     <div>
-      <h3>
+      <h3 class="font-semibold text-xl">
         Skills
       </h3>
-      <ul class="list-reset ml-5">
+      <ul class="ml-5">
         <li>HTML, CSS</li>
         <li>JavaScript, TypeScript</li>
-        <li>Vue.js, Vuex, Nuxt.js</li>
+        <li>React, Vue</li>
         <li>PHP, Node.js</li>
-        <li>Laravel, Yii2, Express.js</li>
         <li>Git, Webpack, Docker</li>
       </ul>
     </div>

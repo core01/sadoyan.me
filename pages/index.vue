@@ -19,7 +19,7 @@
         <p>
           Frontend-developer at
           <a
-            href="https://cobrain.io"
+            href="https://cobrain.ai"
             class="no-underline"
             target="_blank"
             rel="noopener"

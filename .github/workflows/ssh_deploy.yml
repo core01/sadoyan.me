@@ -15,12 +15,12 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: '12.x'
 
-      - run: npm ci
-      - run: npm run generate
+      - run: yarn install
+      - run: yarn generate
 
       # Copying files and artifacts via SSH
       - name: Copying files to server

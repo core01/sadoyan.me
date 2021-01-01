@@ -32,4 +32,5 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           rm: true
           source: "dist/"
+          strip_components: 1
           target: ${{ secrets.REMOTE_DIR }}

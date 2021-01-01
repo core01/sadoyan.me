@@ -29,6 +29,7 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
           rm: true
           source: "dist/"
           target: ${{ secrets.REMOTE_DIR }}

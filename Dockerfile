@@ -1,4 +1,4 @@
-FROM node:carbon-alpine AS builder
+FROM node:lts-alpine3.12 AS builder
 WORKDIR /app
 COPY . .
 RUN yarn install && yarn generate

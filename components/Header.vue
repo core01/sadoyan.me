@@ -19,7 +19,7 @@
       <li class="mr-3 md:mr-6">
         <a
           class="text-red-700"
-          href="https://twitter.com/absoluteaffect"
+          href="https://twitter.com/RASadoyan"
           target="_blank"
           rel="noopener"
         >
@@ -48,7 +48,7 @@
       </li>
       <li class="mr-3 md:mr-6">
         <a
-          href="mailto:sadoyan@protonmail.com"
+          href="mailto:roman@sadoyan.me"
           class="text-red-700"
           target="_blank"
         >

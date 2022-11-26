@@ -8,7 +8,8 @@
     ],
     "allowJs": true,
     "types": [
-      "@fortawesome/fontawesome-common-types"
+      "@fortawesome/fontawesome-common-types",
+      "@types/remark-prism"
     ],
     "skipLibCheck": true,
     "strict": true,

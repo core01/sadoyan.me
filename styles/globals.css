@@ -1,7 +1,9 @@
+@import './code-theme.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 a {
-  color: theme('colors.red.600');
+  color: theme('colors.red.700');
 }

@@ -1,0 +1,15 @@
+.Content h1 {
+  @apply text-4xl;
+}
+.Content h2 {
+  @apply text-3xl;
+}
+.Content h3 {
+  @apply text-2xl;
+}
+.Content h4 {
+  @apply text-xl;
+}
+.Content h5 {
+  @apply text-xl;
+}

@@ -52,6 +52,7 @@ export default function Post({
             <Head>
               <title>{title}</title>
               <meta name="author" content={meta.author} key="author" />
+              <meta property="og:url" key="og:url" content={postUrl} />
               <meta
                 property="og:image:type"
                 content="image/png"

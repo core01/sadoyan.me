@@ -1,6 +1,8 @@
 FROM node:lts-alpine3.12 AS builder
 WORKDIR /app
 COPY . .
+ARG OG_IMAGE_SECRET_KEY
+ENV OG_IMAGE_SECRET_KEY=$OG_IMAGE_SECRET_KEY
 RUN npm ci
 RUN npm run build
 

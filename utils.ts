@@ -92,7 +92,7 @@ export async function generateRssFeed() {
       title: post.meta.title,
       id: `${site_url}/blog/${post.slug}`,
       link: `${site_url}/blog/${post.slug}`,
-      // description: post.description,
+      description: post.meta.description,
       date: new Date(post.meta.publishedAt),
     });
   });

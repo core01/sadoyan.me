@@ -30,8 +30,10 @@ export default function Post({
 }: IProps) {
   const { asPath } = useRouter();
 
-  const postUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}${asPath}`;
+  const tags = meta.tags.split(', ');
 
+  const postUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}${asPath}`;
+  const title = `${meta.title} - sadoyan.me`;
   return (
     <>
       <div className="max-w-3xl mx-auto px-4">
@@ -43,7 +45,28 @@ export default function Post({
         <div className="py-4">
           <div className="flex flex-col max-w-4xl my-10 mx-auto text-gray-700">
             <Head>
-              <title>{meta.title}</title>
+              <title>{title}</title>
+              <meta
+                property="twitter:card"
+                key="twitter:card"
+                content="summary_large_image"
+              />
+              <meta name="author" content={meta.author} key="author" />
+              <meta
+                property="og:image:type"
+                content="image/png"
+                key="og:image:type"
+              />
+              <meta
+                property="og:image:width"
+                content="1200"
+                key="og:image:width"
+              />
+              <meta
+                property="og:image:height"
+                content="630"
+                key="og:image:height"
+              />
               <meta
                 property="og:image"
                 key="og:image"
@@ -51,14 +74,35 @@ export default function Post({
                   `title=${meta.title}&token=${token}&slug=${slug}`
                 )}`}
               />
-              <meta property="og:title" key="og:title" content={meta.title} />
+              <meta property="og:title" key="og:title" content={title} />
+              <meta
+                name="description"
+                key="description"
+                content={meta.description}
+              />
+              <meta
+                property="og:description"
+                key="og:description"
+                content={meta.description}
+              />
+              <meta name="keywords" key="keywords" content={meta.tags} />
             </Head>
 
             <div className="border-b-gray-100 border-b pb-5">
               <h1 className="text-3xl mb-4">{meta.title}</h1>
-              <div className="flex justify-between items-center text-md">
+              <div className="flex justify-between items-center text-md mb-4">
                 <div>Published at {meta.publishedAt}</div>
                 <div>{readingTime.text}</div>
+              </div>
+              <div>
+                {tags.map((tag) => (
+                  <div
+                    key={tag}
+                    className="mr-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border"
+                  >
+                    {tag}
+                  </div>
+                ))}
               </div>
             </div>
             <div

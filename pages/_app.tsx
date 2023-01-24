@@ -14,12 +14,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width" initial-scale="1" />
         <meta
           name="description"
+          key="description"
           content="Roman Sadoyan - Frontend-developer from Saint-Petersburg"
         />
         <meta property="og:url" content="https://sadoyan.me" />
-        <meta property="og:title" content="Roman Sadoyan" />
+        <meta property="og:title" key="og:title" content="Roman Sadoyan" />
         <meta
           property="og:description"
+          key="og:description"
           content="Roman Sadoyan - Frontend-developer from Saint-Petersburg"
         />
         <meta

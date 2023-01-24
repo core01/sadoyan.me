@@ -2,6 +2,8 @@
 title: Mastering Scroll Position Restoration in Vue and Nuxt Projects
 author: Roman Sadoyan
 publishedAt: 24 Jan 2023
+tags: Vue, Nuxt, Scroll position
+description: Solution for restoring the scroll position in Vue and Nuxt projects for long item list pages
 ---
 
 It feels familiar when you're working with a dynamic list of items and want to preserve the scroll position when returning to the list from a detailed page. To keep the data during navigation, it's necessary to store it outside the component, for example, in the Vuex store. This way, you can easily access it from any component in your application. Additionally, using the browser's Forward/Back buttons will automatically restore the scroll position on the page, thanks to the scrollBehavior method, which receives the third argument with the x and y coordinates of the scroll position passed from the popstate browser event.

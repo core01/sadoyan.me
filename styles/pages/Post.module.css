@@ -1,0 +1,13 @@
+.Content {
+    @apply py-4 sm:py-8 text-lg grid gap-6 leading-7;
+    @apply border-b-gray-100 border-b my-4
+}
+
+.Content img {
+    @apply my-4;
+}
+
+.Content ol {
+    list-style: decimal;
+    @apply pl-8;
+}

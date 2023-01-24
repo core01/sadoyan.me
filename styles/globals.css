@@ -2,6 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply text-gray-700
+}
 a {
-  color: theme('colors.red.600');
+  color: theme('colors.red.700');
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+}
+.shiki {
+  padding: 3rem 2rem;
+  border-radius: 5px;
+  margin: 0;
+  overflow: auto;
+  border: 1px solid #d7d7d7;
+  position: relative;
+  @apply text-base mr-4 sm:mr-0;
+}
+
+.shiki code {
+  display: block;
+  padding: 0;
+  margin: 0;
+  background: 0 0;
+  box-shadow: none;
+}
+
+code {
+  @apply bg-violet-100 p-1;
+}
+
+pre {
+  counter-reset: step;
+  counter-increment: step 0;
+}
+
+pre .line::before {
+  content: counter(step);
+  counter-increment: step;
+  width: 1rem;
+  margin-right: 1.5rem;
+  display: inline-block;
+  text-align: right;
+  color: rgba(115,138,148,.4)
 }

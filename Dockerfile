@@ -1,7 +1,7 @@
 FROM node:lts-alpine3.12 AS builder
 WORKDIR /app
 COPY . .
-RUN npm install
+RUN npm ci
 RUN npm run build
 
 EXPOSE 3000

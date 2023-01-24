@@ -51,6 +51,7 @@ export default function Post({
                   `title=${meta.title}&token=${token}&slug=${slug}`
                 )}`}
               />
+              <meta property="og:title" key="og:title" content={meta.title} />
             </Head>
 
             <div className="border-b-gray-100 border-b pb-5">
@@ -84,7 +85,7 @@ export const getStaticProps: GetStaticProps = async (
 ) => {
   const { slug } = context.params as IParams;
 
-  const hmac = createHmac('sha256', 'my_secret');
+  const hmac = createHmac('sha256', process.env.OG_IMAGE_SECRET_KEY!);
   hmac.update(JSON.stringify({ slug }));
   const token = hmac.digest('hex');
 

@@ -34,6 +34,11 @@ export default function Post({
 
   const postUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}${asPath}`;
   const title = `${meta.title} - sadoyan.me`;
+  const ogImageUrl = `${
+    process.env.NEXT_PUBLIC_DOMAIN_URL
+  }/api/og?data=${encodeURIComponent(
+    `title=${meta.title}&token=${token}&slug=${slug}`
+  )}`;
   return (
     <>
       <div className="max-w-3xl mx-auto px-4">
@@ -67,19 +72,11 @@ export default function Post({
                 key="twitter:card"
                 content="summary_large_image"
               />
-              <meta
-                property="og:image"
-                key="og:image"
-                content={`/api/og?data=${encodeURIComponent(
-                  `title=${meta.title}&token=${token}&slug=${slug}`
-                )}`}
-              />
+              <meta property="og:image" key="og:image" content={ogImageUrl} />
               <meta
                 property="twitter:image"
                 key="twitter:image"
-                content={`/api/og?data=${encodeURIComponent(
-                  `title=${meta.title}&token=${token}&slug=${slug}`
-                )}`}
+                content={ogImageUrl}
               />
               <meta property="og:title" key="og:title" content={title} />
               <meta
@@ -103,6 +100,11 @@ export default function Post({
                 content={meta.description}
               />
               <meta name="keywords" key="keywords" content={meta.tags} />
+              <meta
+                property="og:site_name"
+                key="og:site_name"
+                content="sadoyan.me"
+              />
             </Head>
 
             <div className="border-b-gray-100 border-b pb-5">

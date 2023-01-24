@@ -40,7 +40,7 @@ export const Share = ({ url }: IProps) => {
   const SocialButtons = socials.map(({ Component, icon, key }) => {
     return (
       <Component url={url} className="mr-4" key={key}>
-        <FontAwesomeIcon icon={icon} className="hover:text-gray-700" />
+        <FontAwesomeIcon icon={icon} className="hover:text-gray-700 text-lg" />
       </Component>
     );
   });

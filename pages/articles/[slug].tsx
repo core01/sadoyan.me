@@ -46,11 +46,6 @@ export default function Post({
           <div className="flex flex-col max-w-4xl my-10 mx-auto text-gray-700">
             <Head>
               <title>{title}</title>
-              <meta
-                property="twitter:card"
-                key="twitter:card"
-                content="summary_large_image"
-              />
               <meta name="author" content={meta.author} key="author" />
               <meta
                 property="og:image:type"
@@ -68,13 +63,30 @@ export default function Post({
                 key="og:image:height"
               />
               <meta
+                property="twitter:card"
+                key="twitter:card"
+                content="summary_large_image"
+              />
+              <meta
                 property="og:image"
                 key="og:image"
                 content={`/api/og?data=${encodeURIComponent(
                   `title=${meta.title}&token=${token}&slug=${slug}`
                 )}`}
               />
+              <meta
+                property="twitter:image"
+                key="twitter:image"
+                content={`/api/og?data=${encodeURIComponent(
+                  `title=${meta.title}&token=${token}&slug=${slug}`
+                )}`}
+              />
               <meta property="og:title" key="og:title" content={title} />
+              <meta
+                property="twitter:title"
+                key="twitter:title"
+                content={title}
+              />
               <meta
                 name="description"
                 key="description"
@@ -83,6 +95,11 @@ export default function Post({
               <meta
                 property="og:description"
                 key="og:description"
+                content={meta.description}
+              />
+              <meta
+                property="twitter:description"
+                key="twitter:description"
                 content={meta.description}
               />
               <meta name="keywords" key="keywords" content={meta.tags} />
